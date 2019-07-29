@@ -4,8 +4,6 @@ package com.example.demo.service;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.example.demo.domain.User;
 
-//import java.util.Arrays;
-
 /**
  * @author wangshuai
  */
