@@ -26,4 +26,9 @@ public class UserController {
         u.setName(name);
         return testService.save(u);
     }
+
+    @GetMapping("/test")
+    public String test(){
+        return "jenkins ok!";
+    }
 }
