@@ -1,6 +1,5 @@
 package com.example.demo.service;
 
-
 import com.alibaba.dubbo.config.annotation.Service;
 import com.example.api.domain.User;
 import com.example.api.service.UserService;
