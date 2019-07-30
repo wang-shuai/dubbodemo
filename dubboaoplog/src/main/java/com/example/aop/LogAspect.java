@@ -29,6 +29,7 @@ public class LogAspect {
         Object result = null;
         try {
             result = point.proceed(point.getArgs());
+            System.out.println("调用远程方法正常结束");
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
@@ -45,14 +46,19 @@ public class LogAspect {
         String signature = joinPoint.getSignature().toString();
         String methodName = signature.substring(signature.lastIndexOf(".") + 1, signature.indexOf("("));
         String classType = joinPoint.getTarget().getClass().getName();
+        System.out.println("handle classType: " + classType);
         Class<?> clazz = null;
         try {
             clazz = Class.forName(classType);
         } catch (ClassNotFoundException e1) {
-            e1.printStackTrace();
+//            e1.printStackTrace();
+            System.out.println(classType + "反射失败，class not found，" + e1.getMessage());
         }
 
-        Method[] methods = clazz.getDeclaredMethods();
+        Method[] methods = new Method[0];
+        if (clazz != null) {
+            methods = clazz.getDeclaredMethods();
+        }
         System.out.println("methodName: " + methodName);
 
         for (Method method : methods) {

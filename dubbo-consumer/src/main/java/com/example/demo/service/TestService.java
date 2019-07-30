@@ -17,6 +17,11 @@ public class TestService {
     @LogAnnotation(actionName = "service",description = "server test")
     public User save(User user){
         System.out.println("invoke dubbo provider");
+
+        if (userService == null) {
+            System.out.println("@reference  userService is null");
+        }
+
         return userService.saveUser(user);
     }
 }
