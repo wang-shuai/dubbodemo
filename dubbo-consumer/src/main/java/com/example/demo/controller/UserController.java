@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.aop.LogAnnotation;
-import com.example.demo.domain.User;
+import com.example.api.domain.User;
 import com.example.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

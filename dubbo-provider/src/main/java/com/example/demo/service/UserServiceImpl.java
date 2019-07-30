@@ -2,13 +2,16 @@ package com.example.demo.service;
 
 
 import com.alibaba.dubbo.config.annotation.Service;
-import com.example.demo.domain.User;
+import com.example.api.domain.User;
+import com.example.api.service.UserService;
+import org.springframework.stereotype.Component;
 
 /**
  * @author wangshuai
  */
 @Service
-public class UserServiceImpl implements UserService{
+@Component
+public class UserServiceImpl implements UserService {
 
     @Override
     public User saveUser(User user) {

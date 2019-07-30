@@ -2,7 +2,8 @@ package com.example.demo.service;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.example.aop.LogAnnotation;
-import com.example.demo.domain.User;
+import com.example.api.domain.User;
+import com.example.api.service.UserService;
 import org.springframework.stereotype.Component;
 
 /**

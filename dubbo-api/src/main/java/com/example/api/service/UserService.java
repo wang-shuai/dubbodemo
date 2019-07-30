@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.example.api.service;
 
-import com.example.demo.domain.User;
+import com.example.api.domain.User;
 
 /**
  * Created by wangshuai on 2019/5/23.

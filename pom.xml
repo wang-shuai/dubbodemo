@@ -13,6 +13,7 @@
         <module>dubbo-consumer</module>
         <module>dubbo-provider</module>
         <module>dubboaoplog</module>
+        <module>dubbo-api</module>
     </modules>
 
     <properties>
