@@ -11,7 +11,8 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class TestService {
-    @Reference
+    // check=false 服务端未启动 也不会导致消费端启动失败
+//    @Reference(check=false)
     UserService userService;
 
     @LogAnnotation(actionName = "service",description = "server test")
