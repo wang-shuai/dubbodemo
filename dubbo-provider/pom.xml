@@ -32,6 +32,22 @@
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
+            <exclusions>
+                <exclusion>
+<!--                    Curator 2.x.x - compatible with both ZooKeeper 3.4.x and ZooKeeper 3.5.x-->
+<!--                    Curator 3.x.x - compatible only with ZooKeeper 3.5.x and includes support for new features such as dynamic reconfiguration, etc-->
+<!--                    Curator 4.0 has a hard dependency on ZooKeeper 3.5.x-->
+<!--                    If you are using ZooKeeper 3.5.x there's nothing additional to do - just use Curator 4.0-->
+<!--                    Curator 4.0 supports ZooKeeper 3.4.x ensembles in a soft-compatibility mode. To use this mode you must exclude ZooKeeper when adding Curator to your dependency management tool.-->
+                    <artifactId>zookeeper</artifactId>
+                    <groupId>org.apache.zookeeper</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+            <version>3.4.14</version>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
